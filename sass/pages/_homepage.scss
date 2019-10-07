@@ -1,0 +1,474 @@
+.container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+    width: 100%;
+
+}
+
+.color-red {
+    color: $red;
+}
+
+.btn {
+    display: block;
+    max-width: 205px;
+    padding: $btn-padding;
+    font-size: $btn-font-size;
+    outline: none;
+    border: none;
+    color: $btn-color;
+    background-color: $btn-background;
+    line-height: 1;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+
+    &.btn-red {
+        background-color: $red;
+    }
+
+    &.btn-green {
+        background-color: $green;
+    }
+
+    &.btn-small {
+        width: 72px;
+        font-size: 12px;
+        padding: 10px 5px;
+    }
+}
+
+.btn-register,
+.btn-login {
+    border-radius: 3px;
+
+}
+
+// section-search
+.section-search {
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+
+    h1 {
+        @include media ('>=tablet') {
+            font-size: 48px;
+            font-weight: 700;
+            color: $white;
+            text-align: center;
+        }
+    }
+
+    p {
+        max-width: 800px;
+        margin: 0 auto 30px;
+        text-align: center;
+    }
+}
+
+.search-form {
+    max-width: 680px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    margin: 0 auto;
+
+    .input-wrapper {
+        width: 100%;
+    }
+
+    input[type=search] {
+        width: 100%;
+        padding: 10px 45px 10px 20px;
+        color: $dark-blue;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .input-submit-wrapper {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 45px;
+        transform: translateY(-50%);
+        height: 100%;
+
+        &:before {
+            content: "\e986";
+            font-family: 'icomoon';
+            font-size: 20px;
+            color: $gray;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 15px;
+        }
+
+        input[type=submit] {
+            background-color: transparent;
+            border: none;
+            font-size: 0;
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            width: 100%;
+            display: block;
+        }
+    }
+}
+
+// news-products
+.news-products {
+    background-color: $gray;
+
+    h2 {
+        text-align: center;
+        margin: 0 0 54px;
+    }
+
+    .products-items-row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 -15px 55px;
+
+        .col {
+            width: 25%;
+            padding: 15px;
+        }
+    }
+}
+
+.list-products-items,
+.products-items-category {
+    @extend %listreset;
+
+    max-width: 730px;
+    margin: 0 auto 50px;
+    text-align: center;
+
+    li {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 5px 0 0;
+
+        &.active-products-item,
+        &:hover {
+            a {
+                background-color: $red;
+                color: $white;
+            }
+        }
+    }
+
+    .btn-products-item {
+        display: block;
+        text-decoration: none;
+        font-size: 14px;
+        color: $dark-blue;
+        font-weight: 500;
+        background-color: $white;
+        padding: 10px 25px;
+        text-align: center;
+        transition: all 0.3s;
+    }
+}
+
+// trending-products 
+.trending-products {
+    background-color: $white;
+
+    h2 {
+        text-align: center;
+        margin: 0 0 45px;
+    }
+}
+
+// trending-products-carousel 
+.trending-products-carousel {
+    .product-wrapper {
+        padding: 0 15px;
+    }
+
+    .product {
+        border: 1px solid $gray;
+    }
+}
+
+.slick-slider .slick-dots {
+    @extend %listreset;
+
+    margin: 60px auto;
+    text-align: center;
+
+    li {
+
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 6px 0 0;
+
+        &:last-child {
+            margin: 0;
+        }
+
+        &.slick-active,
+        &:hover {
+            button {
+                background-color: $green;
+            }
+        }
+
+        button {
+            font-size: 0;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: $gray;
+            border: none;
+            transition: all 0.3s;
+        }
+    }
+}
+
+// autor-banner
+
+.autor-banner-wrapper {
+
+    @include media ('>=tablet') {
+        max-width: 1106px;
+        width: 100%;
+        height: 440px;
+        background-color: #b5b5b5;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+.autor-banner-content {
+    width: 100%;
+    padding: 50px;
+    background-color: $green;
+
+    @include media ('>=tablet') {
+        max-width: 652px;
+        width: 100%;
+        height: 218px;
+        margin: auto;
+        background-color: $green;
+        display: flex;
+        align-items: center;
+        padding: 0 57px;
+    }
+}
+
+.autor-banner-title {
+    display: none;
+
+    @include media ('>=tablet') {
+        display: block;
+        width: 58%;
+        padding: 0 23px 0 0;
+        font-size: 30px;
+        font-weight: 400;
+        color: #fff;
+    }
+
+    span {
+        @include media ('>=tablet') {
+            font-weight: 700;
+        }
+    }
+}
+
+
+.autor-banner-btn {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 18px 5px;
+    font-size: 18px;
+    font-weight: 400;
+    border: 2px solid #ffffff;
+    color: #263238;
+    background-color: #fff;
+    transition: all 0.3s ease-out;
+    display: block;
+    text-transform: capitalize;
+
+    @include media ('>=tablet') {
+        width: 42%;
+        padding: 18px 40px;
+    }
+
+    &:hover {
+        background: transparent;
+        color: #ffffff;
+        background-color: $green;
+    }
+}
+
+// free-tutorials
+
+.free-tutorials {
+    background-color: $white;
+}
+
+.free-tutorials__title {
+    font-size: 24px;
+    line-height: 1.6;
+    color: $dark-blue;
+    text-align: center;
+    font-weight: 700;
+    margin: 0 0 25px;
+
+    @include media ('>=tablet') {
+        margin: 0 0 55px;
+        font-size: 36px;
+    }
+}
+
+.free-tutorials__row {
+
+    @include media ('>=tablet') {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 -15px;
+    }
+
+    .free-tutorials__col {
+        width: 100%;
+        padding: 0 10px;
+        margin: 10px auto;
+
+        @include media ('>=tablet') {
+            width: 33.31%;
+            padding: 0 10px;
+        }
+
+        .free-tutorials__item {
+            display: block;
+            background-color: #f8f8f8;
+            text-align: center;
+            width: 100%;
+            opacity: 0.8;
+            color: $dark-blue;
+
+            &:hover {
+                opacity: 1;
+                transition: all 0.3s ease;
+                color: $green;
+            }
+
+            .free-tutorial__img {
+                height: 270px;
+                max-width: 370px;
+                width: 100%;
+                background-size: cover;
+                background-position: 50%, 50%;
+                background-repeat: no-repeat;
+            }
+
+            .free-tutorial__item-title {
+                display: block;
+                font-size: 18px;
+                font-weight: 700;
+                padding: 20px 15px;
+                background-color: #ccc;
+
+
+                @include media ('>=tablet') {
+                    font-size: 24px;
+                    padding: 40px 15px;
+
+                }
+            }
+        }
+    }
+}
+
+// our-advantages
+
+.our-advantages {
+
+    background-color: $dark-blue;
+
+    h1 {
+        font-size: 26px;
+        padding: 0 0 30px 0;
+        width: 100%;
+        font-weight: 700;
+        color: $white;
+        text-transform: capitalize;
+        text-align: center;
+
+        @include media ('>=tablet') {
+
+            padding: 0 0 65px 0;
+            font-size: 36px;
+        }
+    }
+}
+
+.our-advantages__row {
+    @include media ('>=tablet') {
+        display: flex;
+        margin: 0 -15px;
+    }
+}
+
+.our-advantages__col {
+    text-align: center;
+
+    @include media ('>=tablet') {
+        width: 33.31%;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .our-advantages__logo {
+        max-width: 115px;
+        width: 100%;
+        display: block;
+        margin: 0 auto 25px;
+        opacity: 0.5;
+
+        &:hover {
+            opacity: 1;
+            transition: all 0.3s ease;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+        }
+    }
+
+    .our-advantages__title {
+
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 0 21px;
+
+        strong {
+            font-size: 24px;
+            font-weight: 500;
+            color: $white;
+
+            &:hover {
+                color: $green;
+            }
+        }
+    }
+
+    p {
+        padding: 0 20px 0;
+        line-height: 1.5;
+    }
+
+}

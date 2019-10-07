@@ -1,0 +1,106 @@
+.upload-products-form-outer {
+
+    .container {
+        background-color: #fff;
+        padding: 22px 45px 67px 45px;
+        border: 1px solid #f2f2f2;
+
+        h2 {
+            border-bottom: 1px solid #f2f2f2;
+            padding: 0 0 25px 0;
+        }
+
+    }
+
+}
+
+.form-part-first {
+    padding: 0 0 75px 0;
+}
+
+.upload-products-form {
+
+    .label-wrapper {
+        width: 15%;
+        margin: 0 30px 0 0;
+    }
+
+    label, .label-upload-file {
+        position: relative;
+        padding: 0 15px 0 0;
+
+        &:before {
+            content: "\e913";
+            font-family: 'icomoon';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            color: $green;
+            font-size: 12px;
+            transform: translateY(-50%) rotate(-180deg);
+        }
+    }
+
+    .input-wrapper {
+        display: flex;
+        align-items: center;
+        margin: 0 0 23px;
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        .upload-wrapper {
+            width: 85%;
+
+            #user-decription {
+                height: 150px;
+            }
+        }
+    }
+}
+
+.upload-wrapper {
+    padding: 8px 10px;
+
+    label {
+        font-size: 12px;
+        color: #444;
+        border: 1px solid #d7d7d7;
+        padding: 5px 10px;
+
+        &:before {
+            display: none;
+        }
+    }
+
+    span {
+        color: #707070;
+        font-size: 12px;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 5px;
+    }
+}
+
+
+
+
+.submit-button {
+    border: none;
+}
+
+.form-part-first {
+    padding: 0;
+}
+
+.textarea-wrapper {
+
+    &.input-wrapper {
+        align-items: flex-start;
+    }
+   
+
+    textarea {
+        width: 85%;
+    }
+}

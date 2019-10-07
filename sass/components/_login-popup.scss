@@ -1,0 +1,32 @@
+.login-popup {
+    display: none;
+    max-width: 500px;
+    height: 200px;
+    background-color: $green;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.show-popup {
+	position: relative;
+    overflow: hidden;
+    max-height: 100vh;
+
+    .login-popup {
+        display: block;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1;
+    }
+}
